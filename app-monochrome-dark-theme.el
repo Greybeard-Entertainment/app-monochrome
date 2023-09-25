@@ -34,11 +34,11 @@
 ;; otherwise.
 
 ;; This package depends on the following freely available, fonts:
-;; IBM Plex <https://github.com/IBM/plex> (OFL-1.1)
-;; Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts> (UFL-1.0 GPL-compatible)
-;; Victor Mono (Ligatured) <https://github.com/rubjo/victor-mono> (OFL-1.1)
-;; Linux Libertine <https://libertine-fonts.org/> (OFL-1.1 or GPLv3)
-;; Fira Code <https://github.com/tonsky/FiraCode> (OFL-1.1)
+;; - IBM Plex <https://github.com/IBM/plex> (OFL-1.1)
+;; - Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts> (UFL-1.0 GPL-compatible)
+;; - Victor Mono (Ligatured) <https://github.com/rubjo/victor-mono> (OFL-1.1)
+;; - Linux Libertine <https://libertine-fonts.org/> (OFL-1.1 or GPLv3)
+;; - Fira Code <https://github.com/tonsky/FiraCode> (OFL-1.1)
 
 
 ;; The best way to install these fonts is via the package manager, but
@@ -47,11 +47,12 @@
 
 ;; The fonts were specifically chosen in order to facilitate usage
 ;; with other packages.  I highly recommend using this in tandem with
-;; `rainbow-delimiters' and `rainbow-mode'.  The main idea is that the
-;; font shapes and shades of luminosity convey that syntactic roles,
-;; if they weren't obvious before.  At the same time, the colour are
-;; used to emphasise the delimiters, and identifiers.  The faces used
-;; for those packages are not yet included in this package.
+;; `rainbow-delimiters' and `rainbow-mode' or
+;; `color-identifiers-mode'.  The main idea is that the font shapes
+;; and shades of luminosity convey that syntactic roles, if they
+;; weren't obvious before.  At the same time, the colour are used to
+;; emphasise the delimiters, and identifiers.  The faces used for
+;; those packages are not yet included in this package.
 
 
 ;;; Code:
