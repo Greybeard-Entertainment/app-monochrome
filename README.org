@@ -1,0 +1,54 @@
+#+TITLE: app-monochrome-themes
+#+AUTHOR: Aleksandr Petrosyan <appetrosyan3@gmail.com>
+* App monochrome themes
+
+A set of two (dark/light) monochromatic, low-contrast themes, that emphasise shapes rather than colours.
+
+* TL;DR
+
+#+BEGIN_SRC emacs-lisp
+  (use-package app-monochrome-dark-theme
+	:ensure t
+	:elpaca
+	(:host github
+	 :repo "Greybeard-Entertainment/app-monochrome"
+	 :branch "barba"))
+  
+  (use-package app-monochrome-light-theme
+	:ensure t
+	:elpaca
+	(:host github
+	 :repo "Greybeard-Entertainment/app-monochrome"
+	 :branch "barba"))
+#+END_SRC
+
+* Motivation
+The human eye has far more rods than cones.  This means that you can see shapes better than colours, and though the shared wisdom among cargo cult text editors is that everything should be of one mono-spaced font type, which is great for when you're trying to do ASCII art or trying to figure out if you've indented your code properly in languages that have no business caring about the indentation level.  The reality is that you use colours to emphasise things which can be understood from the structure alone and things like =rainbow-delimiters= and/or =rainbow-mode=, have to deal with scraps.  Things don't stand out anymore.  The signal to noise ratio is, as such, basically zero.
+
+By contrast (pardon the pun) when that syntax highlighting is monochromatic,  one is spoiled for choice of highlighting methodology.  I personally found that using colours so that I don't have to parse out similar looking identifiers helps quite a bit.
+
+* Fonts
+
+This package relies on the following freely-available (and last I checked, GPL-compatible) fonts. 
+- IBM Plex [[https://github.com/IBM/plex][source]] (OFL-1.1)
+- Ubuntu Mono (Ligatured) [[https://github.com/canonical/UbuntuMono-fonts][source]] (UFL-1.0 GPL-compatible)
+- Victor Mono (Ligatured) [[https://github.com/rubjo/victor-mono][source]] (OFL-1.1)
+- Linux Libertine [[https://libertine-fonts.org/][source]] (OFL-1.1 or GPLv3)
+- Fira Code [[https://github.com/tonsky/FiraCode][source]] (OFL-1.1)
+
+I would highly recommend that you install them via your GNU Linux distribution package manager, e.g. for Arch Linux the following command will install the fonts that I use:
+
+#+BEGIN_SRC bash
+  sudo pacman -S\
+	   extra/ttf-ibmplex-mono-nerd \
+	   extra/ttf-ubuntu-mono-nerd \
+	   extra/ttf-victor-mono-nerd \
+	   extra/libertinus-font \
+	   extra/ttf-firacode-nerd
+#+END_SRC
+
+If your distribution does not package these fonts, you can always download an =otf= version that will be installable on a per-user basis via a graphical environment.
+
+* Screenshots
+
+TODO
