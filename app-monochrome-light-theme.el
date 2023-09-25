@@ -109,4 +109,12 @@
  '(magit-branch-remote-head ((t (:box (:line-width (1 . 1) :color nil :style nil) :inherit (magit-branch-remote)))))
  '(default ((t (:inherit nil :extend nil :stipple nil :background "#ffffff" :foreground "#282a2e" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :family "IBM Plex Sans")))))
 
+
+;;;###autoload
+(and load-file-name
+     (boundp 'custom-theme-load-path)
+     (add-to-list 'custom-theme-load-path
+                  (file-name-as-directory
+                   (file-name-directory load-file-name))))
+
 (provide-theme 'app-monochrome-light)
