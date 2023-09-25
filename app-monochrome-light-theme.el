@@ -1,5 +1,62 @@
+;;; app-monochrome-light-theme.el --- a low contrast monochromatic theme that emphasises shapes rather than colours.
+
+;; Author: Aleksandr Petrosyan <appetrosyan3@gmail.com>
+;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
+;; Version: 0.0.1
+
+;;; Blurb:
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; A monochromatic theme that emphasises shapes over colours.
+
+;; The human eye has a ton more rods than cones, and in low-light
+;; conditions one finds shapes more easily than colours.  It is the
+;; basis of this theme.
+
+;; Rather than have the effective equivalent of a circus on your
+;; screen, it is instead the intention of this package to provide you
+;; with a well-shaped buffer that has an occasional splash of colour
+;; to highlight the important aspects that cannot be highlighted
+;; otherwise.
+
+;; This package depends on the following freely available, fonts:
+;; IBM Plex <https://github.com/IBM/plex> (OFL-1.1)
+;; Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts> (UFL-1.0 GPL-compatible)
+;; Victor Mono (Ligatured) <https://github.com/rubjo/victor-mono> (OFL-1.1)
+;; Linux Libertine <https://libertine-fonts.org/> (OFL-1.1 or GPLv3)
+;; Fira Code <https://github.com/tonsky/FiraCode> (OFL-1.1)
+
+
+;; The best way to install these fonts is via the package manager, but
+;; downloading those fonts and installing them on a per-user or
+;; system-wide basis is also an option.
+
+;; The fonts were specifically chosen in order to facilitate usage
+;; with other packages.  I highly recommend using this in tandem with
+;; `rainbow-delimiters' and `rainbow-mode'.  The main idea is that the
+;; font shapes and shades of luminosity convey that syntactic roles,
+;; if they weren't obvious before.  At the same time, the colour are
+;; used to emphasise the delimiters, and identifiers.  The faces used
+;; for those packages are not yet included in this package.
+
+
+;;; Code:
 (deftheme app-monochrome-light
-  "Created 2021-03-12.")
+  "A light variant of the `app-monochrome-dark' theme.")
 
 (custom-theme-set-faces
  'app-monochrome-light
@@ -118,3 +175,4 @@
                    (file-name-directory load-file-name))))
 
 (provide-theme 'app-monochrome-light)
+;;; app-monochrome-light-theme.el ends here
