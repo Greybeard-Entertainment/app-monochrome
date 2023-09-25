@@ -51,4 +51,8 @@ If your distribution does not package these fonts, you can always download an =o
 
 * Screenshots
 
-TODO
+[[Screenshots/emacs-lisp-with-color-identifiers-mode.png][emacs lisp with =color-identifiers-mode=]]
+
+[[Screenshots/magit-and-org-olivetti.png][Magit and org with Olivetti mode]]
+
+[[Screenshots/rust-mode.png][Example rust function with highlighted identifiers]]
