@@ -71,7 +71,7 @@
  '(warning ((t (:foreground "red4"))))
  '(success ((t (:foreground "white" :weight bold))))
  '(bookmark-face ((t (:background "Black" :foreground "Gold"))))
- '(isearch (t (:inherit link)))
+ '(isearch ((t (:inherit link))))
  '(custom-link ((t (:inherit link :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
  '(link ((t (:underline t :foreground "#5cacac"))))
  '(line-number ((t (:inherit shadow :family "Victor Mono"))))
@@ -162,7 +162,7 @@
  '(org-default ((t (:inherit (default)))))
 
  '(tree-sitter-hl-face:constructor ((t (:inherit tree-sitter-hl-face:constant))))
- '(tree-sitter-hl-face:property.definition ((t (:inherit (tree-sitter-hl-face:variable.parameter)))))
+ '(tree-sitter-hl-face:property.definition ((t (:inherit tree-sitter-hl-face:variable.parameter))))
  '(tree-sitter-hl-face:number ((t (:inherit (tree-sitter-hl-face:constant)))))
  '(tree-sitter-hl-face:method ((t (:inherit (tree-sitter-hl-face:function)))))
  '(tree-sitter-hl-face:function.call ((t (:inherit font-lock-function-name-face))))
@@ -189,7 +189,7 @@
  '(tree-sitter-hl-face:type.super ((t (:inherit (tree-sitter-hl-face:type)))))
  '(tree-sitter-hl-face:type.argument ((t (:inherit (tree-sitter-hl-face:type)))))
  '(tree-sitter-hl-face:property ((t (:inherit nil :slant italic))))
- '(tree-sitter-hl-face:attribute ((t (:inherit nil))))
+ '(tree-sitter-hl-face:attribute ((t (:inherit default))))
 
 
  '(markdown-header-face ((t (:weight bold :inherit magit-section-heading :height 1.5))))
