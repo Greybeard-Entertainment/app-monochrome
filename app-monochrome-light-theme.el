@@ -154,7 +154,7 @@
  '(magit-section-heading-selection ((t (:extend t :weight bold :height 1.25))))
  '(magit-section-secondary-heading ((t (:weight bold :extend t))))
  '(magit-section-heading ((t (:extend t :weight bold :height 2.0 :inherit font-lock-constant-face))))
- '(magit-section-highlight ((((class color) (background light)) (:background "grey50" :extend t)) (((class color) (background dark)) (:background "grey44" :extend t))))
+ '(magit-section-highlight ((((class color) (background light)) (:background "grey80" :extend t)) (((class color) (background dark)) (:background "grey44" :extend t))))
  '(magit-section-child-count ((t nil)))
  '(magit-diff-file-heading ((t (:extend t :weight bold :family "IBM Plex Serif"))))
 
