@@ -87,7 +87,7 @@
  '(font-lock-variable-name-face ((t (:foreground "white" :weight thin))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
 
- '(mode-line ((t (:inherit line-number))))
+ '(mode-line ((t (:inherit line-number :box t))))
  '(mode-line-highlight ((t (:family "Linux Libertine Mono" :inherit mode-line :weight bold))))
  '(mode-line-buffer-id ((t (:inherit mode-line-highlight))))
 
@@ -131,8 +131,13 @@
  '(counsel-variable-documentation ((t (:inherit (font-lock-comment-face)))))
  '(ivy-prompt-match ((t (:inherit (ivy-current-match)))))
 
- '(minibuffer-prompt ((t (:inherit highlight :weight bold))))
- '(completions-common-part ((t (:inherit completions-highlight :box (:line-width (2 . 2) :color "grey75" :style released-button) :underline t))))
+ '(minibuffer-prompt ((t (:inherit default :weight bold :slant italic :box t))))
+ '(orderless-match-face-0 ((t (:inherit error :weight bold))))
+ '(orderless-match-face-1 ((t (:inherit error :underline t))))
+ '(orderless-match-face-2 ((t (:inherit link :weight bold))))
+ '(orderless-match-face-3 ((t (:inherit link :underline t))))
+ '(completions-common-part ((t (:inherit error))))
+
 
  '(ivy-grep-line-number ((t (:inherit (compilation-line-number)))))
  '(sp-show-pair-match-content-face ((t nil)))
@@ -250,3 +255,7 @@
 (provide-theme 'app-monochrome-dark)
 ;;; app-monochrome-dark-theme.el ends here
 
+
+;; Local Variables:
+;; jinx-local-words: "Fira Plex el gmail"
+;; End:
