@@ -150,6 +150,9 @@
  '(magit-section-child-count ((t nil)))
  '(magit-diff-file-heading ((t (:extend t :weight bold :family "IBM Plex Serif"))))
 
+ '(git-commit-keyword ((t (:inherit font-lock-keyword-face))))
+ '(git-commit-summary ((t (:inherit default))))
+
  '(org-default ((t (:inherit (default)))))
 
  '(tree-sitter-hl-face:constructor ((t (:inherit tree-sitter-hl-face:constant))))
@@ -229,10 +232,10 @@
 
 ;;;###autoload
 (and load-file-name
-     (boundp 'custom-theme-load-path)
-     (add-to-list 'custom-theme-load-path
-                  (file-name-as-directory
-                   (file-name-directory load-file-name))))
+	 (boundp 'custom-theme-load-path)
+	 (add-to-list 'custom-theme-load-path
+				  (file-name-as-directory
+				   (file-name-directory load-file-name))))
 
 
 (provide-theme 'app-monochrome-dark)
