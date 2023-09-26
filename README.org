@@ -22,12 +22,11 @@ A set of two (dark/light) monochromatic, low-contrast themes, that emphasise sha
 	 :branch "barba"))
 #+END_SRC
 
-* Motivation
-The human eye has far more rods than cones.  This means that you can see shapes better than colours, and though the shared wisdom among cargo cult text editors is that everything should be of one mono-spaced font type, which is great for when you're trying to do ASCII art or trying to figure out if you've indented your code properly in languages that have no business caring about the indentation level.  The reality is that you use colours to emphasise things which can be understood from the structure alone and things like =rainbow-delimiters= and/or =rainbow-mode=, have to deal with scraps.  Things don't stand out anymore.  The signal to noise ratio is, as such, basically zero.
+* DONE Motivation The human eye has far more rods than cones.  This means that you can see shapes better than colours, and though the shared wisdom among cargo cult text editors is that everything should be of one mono-spaced font type, which is great for when you're trying to do ASCII art or trying to figure out if you've indented your code properly in languages that have no business caring about the indentation level.  The reality is that you use colours to emphasise things which can be understood from the structure alone and things like =rainbow-delimiters= and/or =rainbow-mode=, have to deal with scraps.  Things don't stand out anymore.  The signal to noise ratio is, as such, basically zero.
 
 By contrast (pardon the pun) when that syntax highlighting is monochromatic,  one is spoiled for choice of highlighting methodology.  I personally found that using colours so that I don't have to parse out similar looking identifiers helps quite a bit.
 
-* Fonts
+* TODO Fonts
 
 This package relies on the following freely-available (and last I checked, GPL-compatible) fonts. 
 - IBM Plex [[https://github.com/IBM/plex][source]] (OFL-1.1)
@@ -56,3 +55,7 @@ If your distribution does not package these fonts, you can always download an =o
 [[Screenshots/magit-and-org-olivetti.png]]
 
 [[Screenshots/rust-mode.png]]
+
+# Local Variables:
+# jinx-local-words: "Fira Plex gmail"
+# End:
