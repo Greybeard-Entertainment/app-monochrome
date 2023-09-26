@@ -91,8 +91,9 @@
  '(mode-line-highlight ((t (:family "Linux Libertine Mono" :inherit mode-line :weight bold))))
  '(mode-line-buffer-id ((t (:inherit mode-line-highlight))))
 
+ '(completions-commmon-part ((t (:inherit t :weight bold)))
+
  '(lsp-face-semhl-function ((t (:inherit (font-lock-function-name-face)))))
- '(flyspell-incorrect ((t (:background "light gray" :foreground "red4"))))
  '(lsp-face-highlight-textual ((t (:inherit (highlight)))))
  '(lsp-face-highlight-write ((t (:weight bold :inherit (highlight)))))
  '(lsp-face-semhl-type ((t (:inherit (font-lock-type-face)))))
@@ -108,29 +109,36 @@
  '(lazy-highlight ((t (:distant-foreground "white" :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
  '(swiper-background-match-face-3 ((t (:inherit (swiper-match-face-3)))))
  '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
+
  '(lsp-ui-doc-highlight-hover ((t (:inherit highlight))))
  '(lsp-ui-doc-background ((t (:background "gray30"))))
  '(lsp-ui-sideline-global ((t nil)))
  '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey" :style nil) :foreground "grey"))))
- '(flycheck-fringe-warning ((t (:inherit (warning)))))
- '(flycheck-info ((t (:inherit success :underline t))))
- '(doom-modeline-lsp-success ((t (:inherit nil :weight bold))))
  '(lsp-ui-peek-list ((((background light)) (:background "light gray")) (t (:background "#181818"))))
  '(lsp-ui-peek-line-number ((t (:foreground "grey25"))))
+
+ '(flycheck-fringe-warning ((t (:inherit (warning)))))
+ '(flycheck-info ((t (:inherit success :underline t))))
+
 
  '(ivy-match-required-face ((t (:foreground "red" :inherit (minibuffer-prompt)))))
  '(ivy-virtual ((t (:inherit (font-lock-builtin-face)))))
  '(ivy-action ((t (:inherit (font-lock-builtin-face)))))
+
+ '(doom-modeline-lsp-success ((t (:inherit nil :weight bold))))
 
  '(org-list-dt ((t (:bold t))))
  '(compilation-line-number ((t (:inherit (font-lock-keyword-face)))))
  '(doom-modeline-buffer-file ((t (:inherit (mode-line-buffer-id bold)))))
  '(counsel-variable-documentation ((t (:inherit (font-lock-comment-face)))))
  '(ivy-prompt-match ((t (:inherit (ivy-current-match)))))
- '(minibuffer-prompt ((t (:foreground "#4c9c9c" :weight bold))))
+
+ '(minibuffer-prompt ((t (:inherit highlight :weight bold))))
+ '(completions-common-part ((t (:inherit completions-highlight :box (:line-width (2 . 2) :color "grey75" :style released-button) :underline t))))
+
  '(ivy-grep-line-number ((t (:inherit (compilation-line-number)))))
  '(sp-show-pair-match-content-face ((t nil)))
- '(show-paren-match ((t (:background "red4"))))
+ '(show-paren-match ((t (:inherit error))))
  '(show-paren-mismatch ((t (:inherit show-paren-match :inverse-video t))))
 
  '(magit-filename ((t (:weight normal))))
@@ -223,6 +231,9 @@
  '(rainbow-delimiters-depth-9-face ((t (:weight bold :inherit rainbow-delimiters-base-face :foreground "#afa"))))
 
  '(jinx-misspelled ((t (:underline t :inherit warning))))
+ '(jinx-highlight ((t (:inherit warning :box t))))
+
+ '(flyspell-incorrect ((t (:underline t :inherit warning))))
 
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
