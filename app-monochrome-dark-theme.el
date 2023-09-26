@@ -91,8 +91,6 @@
  '(mode-line-highlight ((t (:family "Linux Libertine Mono" :inherit mode-line :weight bold))))
  '(mode-line-buffer-id ((t (:inherit mode-line-highlight))))
 
- '(completions-commmon-part ((t (:inherit t :weight bold)))
-
  '(lsp-face-semhl-function ((t (:inherit (font-lock-function-name-face)))))
  '(lsp-face-highlight-textual ((t (:inherit (highlight)))))
  '(lsp-face-highlight-write ((t (:weight bold :inherit (highlight)))))
@@ -251,8 +249,4 @@
 
 (provide-theme 'app-monochrome-dark)
 ;;; app-monochrome-dark-theme.el ends here
-`
 
-;; Local Variables:
-;; jinx-local-words: "Fira Plex el gmail gray"
-;; End:
