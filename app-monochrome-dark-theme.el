@@ -242,7 +242,8 @@
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "black" :background "white"))))
 
- '(solaire-default-face ((t (:inherit default) :background "grey16"))))
+ '(fancy-compilation-default-face ((t (:inherit font-lock-string-face))))
+ )
 
 ;;;###autoload
 (and load-file-name

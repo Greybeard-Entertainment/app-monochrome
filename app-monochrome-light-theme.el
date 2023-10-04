@@ -238,6 +238,8 @@
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "grey30" :background "white"))))
+
+ '(fancy-compilation-default-face ((t (:inherit font-lock-string-face))))
  )
 
 
