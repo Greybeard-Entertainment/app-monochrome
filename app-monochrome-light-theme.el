@@ -1,8 +1,9 @@
-;;; app-monochrome-light-theme.el --- a low contrast monochromatic theme that emphasises shapes rather than colours.
+;;; app-monochrome-light-theme.el --- Monochromatic, emphasises shapes over colours
 
 ;; Author: Aleksandr Petrosyan <appetrosyan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
 ;; Version: 0.0.1
+;; Package-Requires: ((emacs "24.4"))
 
 ;;; Blurb:
 
@@ -239,8 +240,7 @@
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "grey30" :background "white"))))
 
- '(fancy-compilation-default-face ((t (:inherit font-lock-string-face))))
- )
+ '(fancy-compilation-default-face ((t (:inherit font-lock-string-face)))))
 
 
 ;;;###autoload

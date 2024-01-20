@@ -1,8 +1,9 @@
-;;; app-monochrome-themes.el --- Low contrast monochromatic themes optimised for OLED. -*- lexical-binding: t; -*-
+;;; app-monochrome-themes.el --- Low contrast monochromatic themes optimised for OLED
 
 ;; Author: Aleksandr Petrosyan <appetrosan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
 ;; Version: 0.0.1
+;; Package-Requires: ((emacs "24.4"))
 
 ;; Licence
 
@@ -52,7 +53,7 @@
 
 ;; The best way to ensure that the fonts are installed on your system
 ;; is to use the system package manager on Linux, and/or to download
-;; the fonts from the above links if a package manager is not available.
+;; the fonts from the above links if a package manager is not available
 
 ;;; Code:
 
