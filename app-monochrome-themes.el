@@ -1,4 +1,4 @@
-;;; app-monochrome-themes.el --- Low contrast monochromatic themes optimised for OLED
+;;; app-monochrome-themes.el --- Low contrast monochrome themes for OLED
 
 ;; Author: Aleksandr Petrosyan <appetrosan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
@@ -43,7 +43,7 @@
 ;; Dependencies:
 ;; This package requires that you have installed the following fonts.
 ;; - IBM Plex <https://github.com/IBM/plex> (OFL-1.1)
-;; - Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts> (UFL-1.0 GPL-compatible)
+;; - Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts>
 ;; - Victor Mono (Ligatured) <https://github.com/rubjo/victor-mono> (OFL-1.1)
 ;; - Linux Libertine <https://libertine-fonts.org/> (OFL-1.1 or GPLv3)
 ;; - Fira Code <https://github.com/tonsky/FiraCode> (OFL-1.1)
@@ -56,6 +56,14 @@
 ;; the fonts from the above links if a package manager is not available
 
 ;;; Code:
+
+(defgroup app-monochrome-themes nil "App Monochrome themes" :prefix "app-monochrome-" :group 'faces)
+
+;;;###autoload
+(add-to-list
+ ;; Register themes when this file is loaded or when the buffer is evaluated:
+ 'custom-theme-load-path
+ (if load-file-name (file-name-directory load-file-name) default-directory))
 
 (provide 'app-monochrome-themes)
 ;;; app-monochrome-themes.el ends here

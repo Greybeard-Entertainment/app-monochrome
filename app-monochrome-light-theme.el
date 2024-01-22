@@ -3,7 +3,6 @@
 ;; Author: Aleksandr Petrosyan <appetrosyan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.4"))
 
 ;;; Blurb:
 
@@ -35,11 +34,11 @@
 ;; otherwise.
 
 ;; This package depends on the following freely available, fonts:
-;; IBM Plex <https://github.com/IBM/plex> (OFL-1.1)
-;; Ubuntu Mono (Ligatured) <https://github.com/canonical/UbuntuMono-fonts> (UFL-1.0 GPL-compatible)
-;; Victor Mono (Ligatured) <https://github.com/rubjo/victor-mono> (OFL-1.1)
-;; Linux Libertine <https://libertine-fonts.org/> (OFL-1.1 or GPLv3)
-;; Fira Code <https://github.com/tonsky/FiraCode> (OFL-1.1)
+;; - IBM Plex <https://github.com/IBM/plex>
+;; - Ubuntu Mono <https://github.com/canonical/UbuntuMono-fonts>
+;; - Victor Mono <https://github.com/rubjo/victor-mono>
+;; - Linux Libertine <https://libertine-fonts.org>
+;; - Fira Code <https://github.com/tonsky/FiraCode>
 
 
 ;; The best way to install these fonts is via the package manager, but
