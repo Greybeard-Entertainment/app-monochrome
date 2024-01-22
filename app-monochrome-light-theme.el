@@ -251,3 +251,8 @@
 
 (provide-theme 'app-monochrome-light)
 ;;; app-monochrome-light-theme.el ends here
+
+;; Local Variables:
+;; jinx-local-words: "Fira Plex el gmail"
+;; package-lint-main-file: "app-monochrome-themes.el"
+;; End:

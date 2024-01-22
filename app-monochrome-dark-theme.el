@@ -258,4 +258,5 @@
 
 ;; Local Variables:
 ;; jinx-local-words: "Fira Plex el gmail"
+;; package-lint-main-file: "app-monochrome-themes.el"
 ;; End:
