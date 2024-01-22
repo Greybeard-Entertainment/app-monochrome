@@ -253,6 +253,7 @@
 
 
 (provide-theme 'app-monochrome-dark)
+(provide 'app-monochrome-dark-theme)
 ;;; app-monochrome-dark-theme.el ends here
 
 

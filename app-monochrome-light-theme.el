@@ -250,6 +250,7 @@
                    (file-name-directory load-file-name))))
 
 (provide-theme 'app-monochrome-light)
+(provide 'app-monochrome-light-theme)
 ;;; app-monochrome-light-theme.el ends here
 
 ;; Local Variables:
