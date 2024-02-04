@@ -1,4 +1,4 @@
-;;; app-monochrome-light-theme.el --- Monochromatic, emphasises shapes over colours
+;;; app-monochrome-themes-dark-theme.el --- Monochrome theme for OLED
 
 ;; Author: Aleksandr Petrosyan <appetrosyan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
@@ -29,7 +29,7 @@
 
 ;; Rather than have the effective equivalent of a circus on your
 ;; screen, it is instead the intention of this package to provide you
-;; with a well-shaped buffer that has an occasional splash of colour
+;; with a well-shaped buffer that has an occasional splash of colours
 ;; to highlight the important aspects that cannot be highlighted
 ;; otherwise.
 
@@ -47,41 +47,44 @@
 
 ;; The fonts were specifically chosen in order to facilitate usage
 ;; with other packages.  I highly recommend using this in tandem with
-;; `rainbow-delimiters' and `rainbow-mode'.  The main idea is that the
-;; font shapes and shades of luminosity convey that syntactic roles,
-;; if they weren't obvious before.  At the same time, the colour are
-;; used to emphasise the delimiters, and identifiers.  The faces used
-;; for those packages are not yet included in this package.
+;; `rainbow-delimiters' and `rainbow-mode' or
+;; `color-identifiers-mode'.  The main idea is that the font shapes
+;; and shades of luminosity convey that syntactic roles, if they
+;; weren't obvious before.  At the same time, the colour are used to
+;; emphasise the delimiters, and identifiers.  The faces used for
+;; those packages are not yet included in this package.
 
 
 ;;; Code:
-(deftheme app-monochrome-light
-  "A light variant of the `app-monochrome-dark' theme.")
+
+(deftheme app-monochrome-themes-dark-theme
+  "A mononcrhomatic white text on grey background theme with emphasis on shapes rather than colours.")
 
 (custom-theme-set-faces
- 'app-monochrome-light
- '(default ((t (:inherit nil :extend nil :stipple nil :background "white" :foreground "grey12" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "CTDB" :family "Fira Code"))))
+ 'app-monochrome-themes-dark-theme
+ ;; Basic faces
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "grey24" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "CTDB" :family "Fira Code"))))
  '(variable-pitch ((t (:family "IBM Plex Serif"))))
 
- '(highlight ((t (:background "#600" :foreground "white"))))
+ '(highlight ((t (:background "#440000"))))
  '(error ((t (:foreground "Red" :weight bold))))
  '(warning ((t (:foreground "red4"))))
- '(success ((t (:foreground "black" :weight bold))))
- '(bookmark-face ((t (:background "black" :foreground "Gold"))))
+ '(success ((t (:foreground "white" :weight bold))))
+ '(bookmark-face ((t (:background "Black" :foreground "Gold"))))
  '(isearch ((t (:inherit link))))
  '(custom-link ((t (:inherit link :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
- '(link ((t (:underline t :foreground "#3c5c5c"))))
+ '(link ((t (:underline t :foreground "#5cacac"))))
  '(line-number ((t (:inherit shadow :family "Victor Mono"))))
 
  '(font-lock-type-face ((t (:weight bold :family "Victor Mono"))))
- '(font-lock-builtin-face ((t (:family "Linux Libertine Mono" :weight bold :foreground "grey47" :background "white"))))
+ '(font-lock-builtin-face ((t (:family "Linux Libertine Mono" :background "grey16"))))
  '(font-lock-function-name-face ((t (:slant italic :family "IBM Plex Mono"))))
  '(font-lock-keyword-face ((t (:weight bold :family "Ubuntu Mono"))))
- '(font-lock-constant-face ((t (:foreground "black" :weight bold :inherit font-lock-type-face))))
- '(font-lock-string-face ((t (:foreground "grey40" :family "IBM Plex Mono"))))
+ '(font-lock-constant-face ((t (:foreground "white" :weight bold :inherit font-lock-type-face))))
+ '(font-lock-string-face ((t (:foreground "grey62" :family "IBM Plex Mono"))))
  '(font-lock-negation-char-face ((t (:weight bold))))
  '(font-lock-doc-face ((t (:slant italic :inherit font-lock-string-face))))
- '(font-lock-variable-name-face ((t (:foreground "black" :weight thin))))
+ '(font-lock-variable-name-face ((t (:foreground "white" :weight thin))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
 
  '(mode-line ((t (:inherit line-number :box t))))
@@ -93,23 +96,23 @@
  '(lsp-face-highlight-write ((t (:weight bold :inherit (highlight)))))
  '(lsp-face-semhl-type ((t (:inherit (font-lock-type-face)))))
  '(lsp-face-semhl-implementation ((t (:weight bold :inherit (font-lock-function-name-face)))))
- '(font-lock-comment-face ((t (:foreground "grey30"))))
+ '(font-lock-comment-face ((t (:foreground "grey55"))))
  '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
- '(ivy-cursor ((((class color) (background light)) (:foreground "white" :background "black")) (((class color) (background dark)) (:foreground "white" :background "white"))))
+ '(ivy-cursor ((((class color) (background light)) (:foreground "white" :background "black")) (((class color) (background dark)) (:foreground "black" :background "white"))))
  '(counsel-outline-1 ((t (:inherit (org-level-1)))))
  '(counsel-application-name ((t (:inherit (font-lock-builtin-face)))))
  '(counsel-active-mode ((t (:inherit (font-lock-builtin-face)))))
  '(swiper-background-match-face-1 ((t (:inherit (swiper-match-face-1)))))
  '(swiper-match-face-1 ((t (:inherit (lazy-highlight)))))
- '(lazy-highlight ((t (:distant-foreground "black" :box (:line-width (2 . 2) :color "grey25" :style released-button)))))
+ '(lazy-highlight ((t (:distant-foreground "white" :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
  '(swiper-background-match-face-3 ((t (:inherit (swiper-match-face-3)))))
- '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey20" :style released-button)))))
+ '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
 
  '(lsp-ui-doc-highlight-hover ((t (:inherit highlight))))
- '(lsp-ui-doc-background ((t (:background "grey30"))))
+ '(lsp-ui-doc-background ((t (:background "gray30"))))
  '(lsp-ui-sideline-global ((t nil)))
- '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey20" :style nil) :foreground "grey20"))))
- '(lsp-ui-peek-list ((((background light)) (:background "dark grey")) (t (:background "#f8f8f8"))))
+ '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey" :style nil) :foreground "grey"))))
+ '(lsp-ui-peek-list ((((background light)) (:background "light gray")) (t (:background "#181818"))))
  '(lsp-ui-peek-line-number ((t (:foreground "grey25"))))
 
  '(flycheck-fringe-warning ((t (:inherit (warning)))))
@@ -148,13 +151,13 @@
  '(magit-keyword ((t (:inherit (font-lock-string-face)))))
  '(magit-tag ((t (:inherit font-lock-constant-face))))
  '(magit-branch-upstream ((t (:slant italic))))
- '(magit-branch-remote ((t (:foreground "black" :weight bold :height 1.25 :family "IBM Plex Serif"))))
+ '(magit-branch-remote ((t (:foreground "white" :weight bold :height 1.25 :family "IBM Plex Serif"))))
  '(magit-branch-local ((t (:weight bold :height 1.25 :family "IBM Plex Serif"))))
  '(magit-branch-current ((t (:box (:line-width (1 . 1) :color nil :style nil) :inherit (magit-branch-local)))))
  '(magit-section-heading-selection ((t (:extend t :weight bold :height 1.25))))
  '(magit-section-secondary-heading ((t (:weight bold :extend t))))
  '(magit-section-heading ((t (:extend t :weight bold :height 2.0 :inherit font-lock-constant-face))))
- '(magit-section-highlight ((((class color) (background light)) (:background "grey80" :extend t)) (((class color) (background dark)) (:background "grey44" :extend t))))
+ '(magit-section-highlight ((((class color) (background light)) (:background "grey95" :extend t)) (((class color) (background dark)) (:background "grey20" :extend t))))
  '(magit-section-child-count ((t nil)))
  '(magit-diff-file-heading ((t (:extend t :weight bold :family "IBM Plex Serif"))))
 
@@ -210,25 +213,25 @@
  '(org-level-6 ((t (:inherit markdown-header-face-4 :height 0.85))))
  '(org-level-7 ((t (:inherit markdown-header-face-4 :height 0.75))))
  '(org-level-8 ((t (:inherit markdown-header-face-4 :height 0.65))))
- '(org-code ((t (:family "Victor Mono" :foreground "grey35" :background "grey10"))))
+ '(org-code ((t (:family "Victor Mono" :foreground "grey75" :background "grey10"))))
  '(org-verbatim ((t (:inherit org-code))))
- '(org-done ((t (:inherit org-headline :foreground "black" :background "#0bf" :box t))))
- '(org-todo ((t (:foreground "black" :background "#f00" :box t))))
+ '(org-done ((t (:inherit org-headline :foreground "white" :background "#048" :box t))))
+ '(org-todo ((t (:foreground "white" :background "#800" :box t))))
  '(org-headline-todo ((t (:inherit org-headline))))
  '(org-headline-done ((t (:inherit org-headline))))
 
  '(org-modern-done ((t (:inherit org-done :height 2.0))))
  '(org-modern-todo ((t (:inherit org-todo :height 2.0))))
 
- '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face :weight bold))))
- '(rainbow-delimiters-depth-2-face ((t (:weight bold :inherit rainbow-delimiters-base-face :foreground "#900"))))
- '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "#5aa"))))
- '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "#04f"))))
- '(rainbow-delimiters-depth-5-face ((t (:inherit rainbow-delimiters-base-face :foreground "#707"))))
- '(rainbow-delimiters-depth-6-face ((t (:inherit rainbow-delimiters-base-face :foreground "#700"))))
- '(rainbow-delimiters-depth-7-face ((t (:inherit rainbow-delimiters-base-face :foreground "#070"))))
- '(rainbow-delimiters-depth-8-face ((t (:inherit rainbow-delimiters-base-face :foreground "#007"))))
- '(rainbow-delimiters-depth-9-face ((t (:weight bold :inherit rainbow-delimiters-base-face :foreground "#070"))))
+ '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face))))
+ '(rainbow-delimiters-depth-2-face ((t (:weight bold :inherit rainbow-delimiters-base-face))))
+ '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "#fda"))))
+ '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "#7fd"))))
+ '(rainbow-delimiters-depth-5-face ((t (:inherit rainbow-delimiters-base-face :foreground "#f0a"))))
+ '(rainbow-delimiters-depth-6-face ((t (:inherit rainbow-delimiters-base-face :foreground "#acf"))))
+ '(rainbow-delimiters-depth-7-face ((t (:inherit rainbow-delimiters-base-face :foreground "#faa"))))
+ '(rainbow-delimiters-depth-8-face ((t (:inherit rainbow-delimiters-base-face :foreground "#0af"))))
+ '(rainbow-delimiters-depth-9-face ((t (:weight bold :inherit rainbow-delimiters-base-face :foreground "#afa"))))
 
  '(jinx-misspelled ((t (:underline t :inherit warning))))
  '(jinx-highlight ((t (:inherit warning :box t))))
@@ -237,21 +240,22 @@
 
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
- '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "grey30" :background "white"))))
+ '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "black" :background "white"))))
 
  '(fancy-compilation-default-face ((t (:inherit font-lock-string-face)))))
 
-
 ;;;###autoload
 (and load-file-name
-     (boundp 'custom-theme-load-path)
-     (add-to-list 'custom-theme-load-path
-                  (file-name-as-directory
-                   (file-name-directory load-file-name))))
+	 (boundp 'custom-theme-load-path)
+	 (add-to-list 'custom-theme-load-path
+				  (file-name-as-directory
+				   (file-name-directory load-file-name))))
 
-(provide-theme 'app-monochrome-light)
-(provide 'app-monochrome-light-theme)
-;;; app-monochrome-light-theme.el ends here
+
+(provide-theme 'app-monochrome-themes-dark-theme)
+(provide 'app-monochrome-themes-dark-theme)
+;;; app-monochrome-themes-dark-theme.el ends here
+
 
 ;; Local Variables:
 ;; jinx-local-words: "Fira Plex el gmail"
