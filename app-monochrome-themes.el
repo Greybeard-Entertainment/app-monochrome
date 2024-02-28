@@ -1,4 +1,4 @@
-;;; app-monochrome-themes.el --- Low contrast monochrome themes for OLED
+;;; app-monochrome-themes.el --- Low contrast monochrome themes
 
 ;; Author: Aleksandr Petrosyan <appetrosan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
