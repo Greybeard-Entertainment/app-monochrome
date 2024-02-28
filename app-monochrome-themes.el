@@ -57,7 +57,7 @@
 
 ;;; Code:
 
-(defgroup app-monochrome-themes nil "App Monochrome themes" :prefix "app-monochrome-" :group 'faces)
+(defgroup app-monochrome-themes nil "App Monochrome themes." :prefix "app-monochrome-" :group 'faces)
 
 ;;;###autoload
 (add-to-list
