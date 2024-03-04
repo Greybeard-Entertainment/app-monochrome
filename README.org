@@ -6,19 +6,8 @@ A set of two (dark/light) monochromatic, low-contrast themes, that emphasise sha
 * TL;DR
 
 #+BEGIN_SRC emacs-lisp
-  (use-package app-monochrome-dark-theme
-	:ensure t
-	:elpaca
-	(:host github
-	 :repo "Greybeard-Entertainment/app-monochrome"
-	 :branch "barba"))
-  
-  (use-package app-monochrome-light-theme
-	:ensure t
-	:elpaca
-	(:host github
-	 :repo "Greybeard-Entertainment/app-monochrome"
-	 :branch "barba"))
+(use-package app-monochrome-themes
+  :ensure t)
 #+END_SRC
 
 * Motivation
@@ -47,6 +36,10 @@ I would highly recommend that you install them via your GNU Linux distribution p
 #+END_SRC
 
 If your distribution does not package these fonts, you can always download an =otf= version that will be installable on a per-user basis via a graphical environment.
+
+* Disclaimer
+
+The theme is a work in progress and optimisations for the WCAG are underway.  The light theme is better optimised for OLED as of writing, but the dark theme is going to be optimised as well.
 
 * Screenshots
 
