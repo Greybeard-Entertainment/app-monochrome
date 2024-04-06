@@ -60,11 +60,15 @@
 
 (custom-theme-set-faces
  'app-monochrome-themes-light-theme
- '(default ((t (:inherit nil :extend nil :stipple nil :background "white" :foreground "grey12" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "CTDB" :family "Fira Code"))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "white" :foreground "grey12" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "ADBO" :family "Victor Mono"))))
  '(variable-pitch ((t (:family "IBM Plex Serif"))))
+ '(italic ((t (:slant italic :weight normal :family "IBM Plex Sans"))))
 
- '(highlight ((t (:background "#600" :foreground "white"))))
- '(error ((t (:foreground "Red" :weight bold))))
+ '(dired-flagged ((t (:foreground "Red" :box (:line-width (2 . 2) :color "Red" :style released-button) :weight bold))))
+ '(dired-set-id ((t (:underline t))))
+
+ '(highlight ((t (:background "#bcc" :foreground "black"))))
+ '(error ((t (:background "#fbb" :foreground "black" :box (:line-width (2 . 2) :color "Black" :style flat-button)))))
  '(warning ((t (:foreground "red4"))))
  '(success ((t (:foreground "black" :weight bold))))
  '(bookmark-face ((t (:background "black" :foreground "Gold"))))
@@ -73,6 +77,7 @@
  '(link ((t (:underline t :foreground "#3c5c5c"))))
  '(line-number ((t (:inherit shadow :family "Victor Mono"))))
 
+ '(font-lock-comment-face ((t (:foreground "#888"))))
  '(font-lock-type-face ((t (:weight bold :family "Victor Mono"))))
  '(font-lock-builtin-face ((t (:family "Linux Libertine Mono" :weight bold :foreground "grey47" :background "white"))))
  '(font-lock-function-name-face ((t (:slant italic :family "IBM Plex Mono"))))
@@ -106,19 +111,22 @@
  '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey20" :style released-button)))))
 
  '(lsp-ui-doc-highlight-hover ((t (:inherit highlight))))
- '(lsp-ui-doc-background ((t (:background "grey30"))))
+ '(lsp-ui-doc-background ((t (:background "grey90"))))
  '(lsp-ui-sideline-global ((t nil)))
  '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey20" :style nil) :foreground "grey20"))))
  '(lsp-ui-peek-list ((((background light)) (:background "dark grey")) (t (:background "#f8f8f8"))))
  '(lsp-ui-peek-line-number ((t (:foreground "grey25"))))
 
- '(flycheck-fringe-warning ((t (:inherit (warning)))))
  '(flycheck-info ((t (:inherit success :underline t))))
-
+ '(flycheck-warning ((t (:underline "dark red"))))
+ '(flycheck-error ((t (:background "#fbb" :box (:line-width (2 . 2) :color "Red" :style flat-button)))))
+ '(flycheck-fringe-warning ((t (:inherit (warning)))))
+ '(trailing-whitespace ((t (:underline "blue"))))
 
  '(ivy-match-required-face ((t (:foreground "red" :inherit (minibuffer-prompt)))))
  '(ivy-virtual ((t (:inherit (font-lock-builtin-face)))))
  '(ivy-action ((t (:inherit (font-lock-builtin-face)))))
+ '(ivy-grep-line-number ((t (:inherit (compilation-line-number)))))
 
  '(doom-modeline-lsp-success ((t (:inherit nil :weight bold))))
 
@@ -129,16 +137,14 @@
  '(ivy-prompt-match ((t (:inherit (ivy-current-match)))))
 
  '(minibuffer-prompt ((t (:inherit default :weight bold :slant italic :box t))))
- '(orderless-match-face-0 ((t (:inherit error :weight bold))))
- '(orderless-match-face-1 ((t (:inherit error :underline t))))
+ '(orderless-match-face-0 ((t (:background "#8cc"))))
+ '(orderless-match-face-1 ((t (:background "#bbf" :underline t))))
  '(orderless-match-face-2 ((t (:inherit link :weight bold))))
  '(orderless-match-face-3 ((t (:inherit link :underline t))))
  '(completions-common-part ((t (:inherit error))))
 
-
- '(ivy-grep-line-number ((t (:inherit (compilation-line-number)))))
  '(sp-show-pair-match-content-face ((t nil)))
- '(show-paren-match ((t (:inherit error))))
+ '(show-paren-match ((t (:inherit default :background "#8cc"))))
  '(show-paren-mismatch ((t (:inherit show-paren-match :inverse-video t))))
 
  '(magit-filename ((t (:weight normal))))
@@ -195,9 +201,9 @@
 
 
  '(markdown-header-face ((t (:weight bold :inherit magit-section-heading :height 1.5))))
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 0.85))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 0.75))))
- '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 0.65))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 0.65 :family "IBM Plex Sans"))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 0.4 :family "IBM Plex Serif"))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 0.3 :family "IBM Plex Serif"))))
  '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 0.55))))
  '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 0.55))))
  '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 0.55))))
@@ -210,15 +216,17 @@
  '(org-level-6 ((t (:inherit markdown-header-face-4 :height 0.85))))
  '(org-level-7 ((t (:inherit markdown-header-face-4 :height 0.75))))
  '(org-level-8 ((t (:inherit markdown-header-face-4 :height 0.65))))
- '(org-code ((t (:family "Victor Mono" :foreground "grey35" :background "grey10"))))
+ '(org-code ((t (:background "grey95" :foreground "grey25" :weight bold :family "IBM Plex Mono"))))
  '(org-verbatim ((t (:inherit org-code))))
+ '(org-block ((t (:inherit shadow :extend t :family "VictorMono Nerd Font"))))
  '(org-done ((t (:inherit org-headline :foreground "black" :background "#0bf" :box t))))
  '(org-todo ((t (:foreground "black" :background "#f00" :box t))))
  '(org-headline-todo ((t (:inherit org-headline))))
  '(org-headline-done ((t (:inherit org-headline))))
-
- '(org-modern-done ((t (:inherit org-done :height 2.0))))
- '(org-modern-todo ((t (:inherit org-todo :height 2.0))))
+ '(org-verbatim ((t (:inherit org-code :weight light))))
+ '(org-modern-done ((t (:inherit org-done))))
+ '(org-modern-todo ((t (:inherit org-todo))))
+ '(org-table ((t (:foreground "Blue1" :family "VictorMono Nerd Font"))))
 
  '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face :weight bold))))
  '(rainbow-delimiters-depth-2-face ((t (:weight bold :inherit rainbow-delimiters-base-face :foreground "#900"))))
@@ -235,11 +243,12 @@
 
  '(flyspell-incorrect ((t (:underline t :inherit warning))))
 
+ '(rust-unsafe ((t (:weight bold))))
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "grey30" :background "white"))))
 
- '(fancy-compilation-default-face ((t (:inherit font-lock-string-face)))))
+ '(fancy-compilation-default-face ((t (:inherit default)))))
 
 
 ;;;###autoload
@@ -247,7 +256,7 @@
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
-                   (file-name-directory load-file-name))))
+				   (file-name-directory load-file-name))))
 
 (provide-theme 'app-monochrome-themes-light-theme)
 (provide 'app-monochrome-themes-light-theme)
