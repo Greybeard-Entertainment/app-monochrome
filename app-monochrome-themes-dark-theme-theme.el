@@ -65,9 +65,9 @@
  ;; Basic faces
  '(default ((t (:inherit nil :extend nil :stipple nil :background "grey24" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "CTDB" :family "Fira Code"))))
  '(variable-pitch ((t (:family "IBM Plex Serif"))))
-
- '(highlight ((t (:background "#440000"))))
- '(error ((t (:foreground "Red" :weight bold))))
+ '(highlight ((t (:background "#bcc" :foreground "black"))))
+ '(italic ((t (:slant italic :weight normal :family "IBM Plex Sans"))))
+ '(error ((t (:box (:line-width (2 . 2) :color "Red" :style released-button) :weight bold))))
  '(warning ((t (:foreground "red4"))))
  '(success ((t (:foreground "white" :weight bold))))
  '(bookmark-face ((t (:background "Black" :foreground "Gold"))))
@@ -96,9 +96,9 @@
  '(lsp-face-highlight-write ((t (:weight bold :inherit (highlight)))))
  '(lsp-face-semhl-type ((t (:inherit (font-lock-type-face)))))
  '(lsp-face-semhl-implementation ((t (:weight bold :inherit (font-lock-function-name-face)))))
+
  '(font-lock-comment-face ((t (:foreground "grey55"))))
  '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
- '(ivy-cursor ((((class color) (background light)) (:foreground "white" :background "black")) (((class color) (background dark)) (:foreground "black" :background "white"))))
  '(counsel-outline-1 ((t (:inherit (org-level-1)))))
  '(counsel-application-name ((t (:inherit (font-lock-builtin-face)))))
  '(counsel-active-mode ((t (:inherit (font-lock-builtin-face)))))
@@ -109,7 +109,7 @@
  '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
 
  '(lsp-ui-doc-highlight-hover ((t (:inherit highlight))))
- '(lsp-ui-doc-background ((t (:background "gray30"))))
+ '(lsp-ui-doc-background ((t (:background "grey90"))))
  '(lsp-ui-sideline-global ((t nil)))
  '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey" :style nil) :foreground "grey"))))
  '(lsp-ui-peek-list ((((background light)) (:background "light gray")) (t (:background "#181818"))))
@@ -118,8 +118,8 @@
  '(flycheck-fringe-warning ((t (:inherit (warning)))))
  '(flycheck-info ((t (:inherit success :underline t))))
 
-
  '(ivy-match-required-face ((t (:foreground "red" :inherit (minibuffer-prompt)))))
+ '(ivy-cursor ((((class color) (background light)) (:foreground "white" :background "black")) (((class color) (background dark)) (:foreground "black" :background "white"))))
  '(ivy-virtual ((t (:inherit (font-lock-builtin-face)))))
  '(ivy-action ((t (:inherit (font-lock-builtin-face)))))
 
@@ -138,11 +138,11 @@
  '(orderless-match-face-3 ((t (:inherit link :underline t))))
  '(completions-common-part ((t (:inherit error))))
 
-
  '(ivy-grep-line-number ((t (:inherit (compilation-line-number)))))
  '(sp-show-pair-match-content-face ((t nil)))
- '(show-paren-match ((t (:inherit error))))
+ '(show-paren-match ((t (:inherit default :background "#8cc"))))
  '(show-paren-mismatch ((t (:inherit show-paren-match :inverse-video t))))
+ '(trailing-whitespace ((t (:underline "blue"))))
 
  '(magit-filename ((t (:weight normal))))
  '(magit-keyword-squash ((t (:inherit (font-lock-warning-face)))))
@@ -198,12 +198,13 @@
 
 
  '(markdown-header-face ((t (:weight bold :inherit magit-section-heading :height 1.5))))
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 0.85))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 0.75))))
- '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 0.65))))
- '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 0.55))))
- '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 0.55))))
- '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 0.55))))
+ '(markdown-header-face ((t (:weight bold :height 1.2 :family "Ubuntu"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 0.8))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face-1 :height 0.8))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face-2 :height 0.8))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face-3 :height 0.8))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face-4 :height 0.8))))
+ '(markdown-header-face-6 ((t (:inherit markdown-header-face-4 :height 0.8))))
 
  '(org-level-1 ((t (:inherit markdown-header-face))))
  '(org-level-2 ((t (:inherit markdown-header-face-1))))
@@ -213,15 +214,17 @@
  '(org-level-6 ((t (:inherit markdown-header-face-4 :height 0.85))))
  '(org-level-7 ((t (:inherit markdown-header-face-4 :height 0.75))))
  '(org-level-8 ((t (:inherit markdown-header-face-4 :height 0.65))))
+
  '(org-code ((t (:family "Victor Mono" :foreground "grey75" :background "grey10"))))
- '(org-verbatim ((t (:inherit org-code))))
+ '(org-verbatim ((t (:inherit org-code :weight light))))
  '(org-done ((t (:inherit org-headline :foreground "white" :background "#048" :box t))))
  '(org-todo ((t (:foreground "white" :background "#800" :box t))))
  '(org-headline-todo ((t (:inherit org-headline))))
  '(org-headline-done ((t (:inherit org-headline))))
+ '(org-table ((t (:foreground "Blue1" :family "VictorMono Nerd Font"))))
 
  '(org-modern-done ((t (:inherit org-done :height 2.0))))
- '(org-modern-todo ((t (:inherit org-todo :height 2.0))))
+ '(org-modern-todo ((t (:inherit org-todo :height 1.0))))
 
  '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face))))
  '(rainbow-delimiters-depth-2-face ((t (:weight bold :inherit rainbow-delimiters-base-face))))
@@ -236,11 +239,16 @@
  '(jinx-misspelled ((t (:underline t :inherit warning))))
  '(jinx-highlight ((t (:inherit warning :box t))))
 
+ '(orderless-match-face-0 ((t (:background "#8cc"))))
+ '(orderless-match-face-1 ((t (:slant italic :inherit orderless-match-face-0))))
+
  '(flyspell-incorrect ((t (:underline t :inherit warning))))
 
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "black" :background "white"))))
+
+ '(rust-unsafe ((t (:weight bold))))
 
  '(fancy-compilation-default-face ((t (:inherit font-lock-string-face)))))
 
