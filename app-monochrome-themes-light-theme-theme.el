@@ -60,14 +60,16 @@
 
 (custom-theme-set-faces
  'app-monochrome-themes-light-theme
- '(default ((t (:inherit nil :extend nil :stipple nil :background "white" :foreground "grey12" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "ADBO" :family "Victor Mono"))))
- '(variable-pitch ((t (:family "IBM Plex Serif"))))
- '(italic ((t (:slant italic :weight normal :family "IBM Plex Sans"))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "white" :foreground "grey12" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "ADBO" :family "Fira Code"))))
 
  '(dired-flagged ((t (:foreground "Red" :box (:line-width (2 . 2) :color "Red" :style released-button) :weight bold))))
  '(dired-set-id ((t (:underline t))))
+ '(dired-directory ((t (:weight bold))))
+ '(dirvish-media-info-property-key ((t nil)))
 
+ '(variable-pitch ((t (:family "IBM Plex Serif"))))
  '(highlight ((t (:background "#bcc" :foreground "black"))))
+ '(italic ((t (:slant italic :weight normal :family "IBM Plex Sans"))))
  '(error ((t (:background "#fbb" :foreground "black" :box (:line-width (2 . 2) :color "Black" :style flat-button)))))
  '(warning ((t (:foreground "red4"))))
  '(success ((t (:foreground "black" :weight bold))))
@@ -75,10 +77,10 @@
  '(isearch ((t (:inherit link))))
  '(custom-link ((t (:inherit link :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
  '(link ((t (:underline t :foreground "#3c5c5c"))))
- '(line-number ((t (:inherit shadow :family "Victor Mono"))))
+ '(line-number ((t (:inherit shadow :family "VictorMono Nerd Font"))))
 
  '(font-lock-comment-face ((t (:foreground "#888"))))
- '(font-lock-type-face ((t (:weight bold :family "Victor Mono"))))
+ '(font-lock-type-face ((t (:weight bold :family "VictorMono Nerd Font"))))
  '(font-lock-builtin-face ((t (:family "Linux Libertine Mono" :weight bold :foreground "grey47" :background "white"))))
  '(font-lock-function-name-face ((t (:slant italic :family "IBM Plex Mono"))))
  '(font-lock-keyword-face ((t (:weight bold :family "Ubuntu Mono"))))
@@ -86,6 +88,7 @@
  '(font-lock-string-face ((t (:foreground "grey40" :family "IBM Plex Mono"))))
  '(font-lock-negation-char-face ((t (:weight bold))))
  '(font-lock-doc-face ((t (:slant italic :inherit font-lock-string-face))))
+ '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
  '(font-lock-variable-name-face ((t (:foreground "black" :weight thin))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
 
@@ -98,8 +101,7 @@
  '(lsp-face-highlight-write ((t (:weight bold :inherit (highlight)))))
  '(lsp-face-semhl-type ((t (:inherit (font-lock-type-face)))))
  '(lsp-face-semhl-implementation ((t (:weight bold :inherit (font-lock-function-name-face)))))
- '(font-lock-comment-face ((t (:foreground "grey30"))))
- '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
+
  '(ivy-cursor ((((class color) (background light)) (:foreground "white" :background "black")) (((class color) (background dark)) (:foreground "white" :background "white"))))
  '(counsel-outline-1 ((t (:inherit (org-level-1)))))
  '(counsel-application-name ((t (:inherit (font-lock-builtin-face)))))
@@ -116,6 +118,8 @@
  '(lsp-ui-sideline-symbol ((t (:height 0.99 :box (:line-width (1 . -1) :color "grey20" :style nil) :foreground "grey20"))))
  '(lsp-ui-peek-list ((((background light)) (:background "dark grey")) (t (:background "#f8f8f8"))))
  '(lsp-ui-peek-line-number ((t (:foreground "grey25"))))
+
+ '(flymake-error ((t (:underline (:color "Red1" :style dashes :position nil)))))
 
  '(flycheck-info ((t (:inherit success :underline t))))
  '(flycheck-warning ((t (:underline "dark red"))))
@@ -253,9 +257,9 @@
 
 ;;;###autoload
 (and load-file-name
-     (boundp 'custom-theme-load-path)
-     (add-to-list 'custom-theme-load-path
-                  (file-name-as-directory
+	 (boundp 'custom-theme-load-path)
+	 (add-to-list 'custom-theme-load-path
+				  (file-name-as-directory
 				   (file-name-directory load-file-name))))
 
 (provide-theme 'app-monochrome-themes-light-theme)

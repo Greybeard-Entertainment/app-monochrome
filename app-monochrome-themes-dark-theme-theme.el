@@ -67,6 +67,8 @@
 
  '(dired-directory ((t (:weight bold))))
  '(dirvish-media-info-property-key ((t nil)))
+ '(dired-flagged ((t (:foreground "Red" :box (:line-width (2 . 2) :color "Red" :style released-button) :weight bold))))
+ '(dired-set-id ((t (:underline t))))
 
  '(variable-pitch ((t (:family "IBM Plex Serif"))))
  '(highlight ((t (:background "#bcc" :foreground "black"))))
@@ -80,6 +82,7 @@
  '(link ((t (:underline t :foreground "#5cacac"))))
  '(line-number ((t (:inherit shadow :family "VictorMono Nerd Font"))))
 
+ '(font-lock-comment-face ((t (:foreground "#aaa"))))
  '(font-lock-type-face ((t (:weight bold :family "VictorMono Nerd Font"))))
  '(font-lock-builtin-face ((t (:family "Linux Libertine Mono" :background "grey16"))))
  '(font-lock-function-name-face ((t (:slant italic :family "IBM Plex Mono"))))
@@ -88,6 +91,7 @@
  '(font-lock-string-face ((t (:foreground "grey62" :family "IBM Plex Mono"))))
  '(font-lock-negation-char-face ((t (:weight bold))))
  '(font-lock-doc-face ((t (:slant italic :inherit font-lock-string-face))))
+ '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
  '(font-lock-variable-name-face ((t (:foreground "white" :weight thin))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
 
@@ -101,8 +105,6 @@
  '(lsp-face-semhl-type ((t (:inherit (font-lock-type-face)))))
  '(lsp-face-semhl-implementation ((t (:weight bold :inherit (font-lock-function-name-face)))))
 
- '(font-lock-comment-face ((t (:foreground "grey55"))))
- '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
  '(counsel-outline-1 ((t (:inherit (org-level-1)))))
  '(counsel-application-name ((t (:inherit (font-lock-builtin-face)))))
  '(counsel-active-mode ((t (:inherit (font-lock-builtin-face)))))
@@ -112,6 +114,7 @@
  '(swiper-background-match-face-3 ((t (:inherit (swiper-match-face-3)))))
  '(swiper-line-face ((t (:inherit highlight :box (:line-width (2 . 2) :color "grey75" :style released-button)))))
 
+ '(lsp-ui-doc-background ((t (:background "grey10"))))
  '(lsp-ui-doc-highlight-hover ((t (:inherit highlight))))
  '(lsp-ui-doc-background ((t (:background "grey90"))))
  '(lsp-ui-sideline-global ((t nil)))
@@ -120,7 +123,7 @@
  '(lsp-ui-peek-line-number ((t (:foreground "grey25"))))
 
  '(flymake-error ((t (:underline (:color "Red1" :style dashes :position nil)))))
- 
+
  '(flycheck-fringe-warning ((t (:inherit (warning)))))
  '(flycheck-info ((t (:inherit success :underline t))))
 
@@ -254,7 +257,6 @@
  '(lsp-rust-analyzer-inlay-param-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-type-face ((t (:inherit (lsp-rust-analyzer-inlay-face)))))
  '(lsp-rust-analyzer-inlay-face ((t (:inherit font-lock-comment-face :foreground "black" :background "white"))))
- '(lsp-ui-doc-background ((t (:background "grey10"))))
 
  '(rust-unsafe ((t (:weight bold))))
 
