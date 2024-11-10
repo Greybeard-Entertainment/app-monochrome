@@ -3,7 +3,7 @@
 ;; Author: Aleksandr Petrosyan <appetrosan3@gmail.com>
 ;; URL: https://github.com/Greybeard-Entertainment/app-monochrome
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "26.1"))
 
 ;; Licence
 
