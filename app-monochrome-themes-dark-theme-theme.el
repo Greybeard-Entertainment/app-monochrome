@@ -63,7 +63,7 @@
 (custom-theme-set-faces
  'app-monochrome-themes-dark-theme
  ;; Basic faces
- '(default ((t (:inherit nil :extend nil :stipple nil :background "grey24" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 98 :width normal :foundry "CTDB" :family "Fira Code"))))
+ '(default ((t (:family "UbuntuMono Nerd Font" :foundry "DAMA" :slant normal :weight regular :height 98 :width normal))))
 
  '(dired-directory ((t (:weight bold))))
  '(dirvish-media-info-property-key ((t nil)))
@@ -94,6 +94,15 @@
  '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
  '(font-lock-variable-name-face ((t (:foreground "white" :weight thin))))
  '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
+
+ '(font-latex-bold-face ((t (:inherit bold))))
+ '(font-latex-italic-face ((t (:inherit italic))))
+ '(font-latex-math-face ((t (:family "IBM Plex Mono"))))
+ '(font-latex-sectioning-5-face ((t (:inherit org-level-5 :weight bold))))
+ '(font-latex-string-face ((t (:inherit font-lock-string-face))))
+ '(font-latex-underline-face ((t (:inherit underline))))
+ '(font-latex-verbatim-face ((t (:inherit fixed-pitch))))
+ '(font-latex-warning-face ((t (:inherit warning))))
 
  '(mode-line ((t (:inherit line-number :box t))))
  '(mode-line-highlight ((t (:family "Linux Libertine Mono" :inherit mode-line :weight bold))))
@@ -231,7 +240,7 @@
  '(org-todo ((t (:foreground "white" :background "#800" :box t))))
  '(org-headline-todo ((t (:inherit org-headline))))
  '(org-headline-done ((t (:inherit org-headline))))
- '(org-table ((t (:foreground "Blue1" :family "VictorMono Nerd Font"))))
+ '(org-table ((t (:foreground "white" :background "black"  :family "VictorMono Nerd Font"))))
 
  '(org-modern-done ((t (:inherit org-done :height 2.0))))
  '(org-modern-todo ((t (:inherit org-todo :height 1.0))))
